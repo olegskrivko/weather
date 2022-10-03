@@ -5,12 +5,16 @@
 }
   
 body {
-  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  /* background-image: repeating-linear-gradient(19deg, #21D4FD 20%, #B721FF 80%); /* cool effect */
+  background-image: linear-gradient(19deg, #21D4FD 20%, #B721FF 80%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 100vh;
+
+  /* fix white spaces */
+  background-attachment: fixed;
+  height: 100%;
 
   display: grid;
   grid-template-columns: 1fr;
