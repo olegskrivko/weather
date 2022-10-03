@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: 
+  "current-weather-box" 
+  "timeline-box";
+} 
+
+/* CURRENT WEATHER */
+.current-weather-section {
+  grid-area: current-weather-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-weather-card {
+  max-height: 350px;
+  max-width: 500px;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 2fr 2fr 1fr;
+  grid-template-areas: 
+  "attribute-1 attribute-1 attribute-1" 
+  "attribute-2 attribute-3 attribute-3" 
+  "attribute-4 attribute-4 attribute-4" 
+  "attribute-5 attribute-6 attribute-7" 
+  "attribute-8 attribute-9 attribute-10" 
+  "attribute-11 attribute-11 attribute-11";
+  color: rgb(232, 232, 232);
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.current-location-wrapper {
+  grid-area: attribute-1;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.current-temp-img-wrapper {
+  grid-area: attribute-2;
+}
+
+.current-temperature-wrapper {
+  grid-area: attribute-3;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.current-condition-wrapper {
+  grid-area: attribute-4;
+}
+
+.current-chance-of-rain-wrapper {
+  grid-area: attribute-5;
+}
+
+.current-wind-degree-img-wrapper {
+  grid-area: attribute-6;
+}
+
+.current-precipitation-wrapper {
+  grid-area: attribute-7;
+}
+
+.current-humidity-wrapper {
+  grid-area: attribute-8;
+}
+
+.current-uv-wrapper {
+  grid-area: attribute-9;
+}
+
+.current-pressure-wrapper {
+  grid-area: attribute-10;
+}
+
+.current-last-updated-wrapper {
+  grid-area: attribute-11;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.current-location-wrapper,
+.current-temp-img-wrapper,
+.current-temperature-wrapper,
+.current-condition-wrapper,
+.current-chance-of-rain-wrapper,
+.current-wind-degree-img-wrapper,
+.current-precipitation-wrapper,
+.current-humidity-wrapper,
+.current-uv-wrapper,
+.current-pressure-wrapper,
+.current-last-updated-wrapper  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-temperature-wrapper {
+  cursor: pointer;
+}
+
+/* ICONS */
+.chance-of-rain-img,
+.wind-degree-img,
+.precipitation-img,
+.humidity-img,
+.uv-img,
+.pressure-img {
+  display: block;
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+/* CHART */
+.timeline-section {
+  grid-area: timeline-box;
+}
+
+#lineChart {
+  max-width: 100%;
+  max-height: 250px;
+}
