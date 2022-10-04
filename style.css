@@ -140,9 +140,13 @@ body {
 /* CHART */
 .timeline-section {
   grid-area: timeline-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #lineChart {
+  padding: 0 10px;
   max-width: 100%;
   max-height: 250px;
 }
